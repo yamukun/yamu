@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎解きご褒美</title>
+    <style>
+        body {
+            background-color: black; /* 背景を黒に設定 */
+            color: white; /* 文字を白に設定 */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+        h1 {
+            font-size: 3em;
+            color: white;
+        }
+     h1 {
+            font-size: 2em;
+            color: white;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: red;
+        }
+        button {
+            background-color: black; /* ボタンの背景を黒に設定 */
+            color: white; /* ボタンの文字を白に設定 */
+            border: 2px solid white; /* 白色の枠線を追加 */
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333; /* ホバー時は少し明るい黒 */
+        }
+    </style>
+</head>
+<body>
+    <h1>よくぞここへたどり着きました。</h1>
+        <h2>ご自分の勝利を祝し、おいしいコーヒーでも飲んでください。</h2>
+ <h3>...気づくとか、ちょっとビビったわ。(やむ)</h3>
+    <h2>ここをタップするとXにポストができます！みんなに自慢しましょう！</h2>
+    <button id="tweetButton">ポストする</button>
+
+    <script>
+        document.getElementById('tweetButton').onclick = function() {
+            const tweetText = encodeURIComponent("MV【ファイル・アタッチメント】に隠された謎を見事発見し解き明かしました！");
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+            window.open(twitterUrl, '_blank');
+        };
+    </script>
+</body>
+</html>
+
+
