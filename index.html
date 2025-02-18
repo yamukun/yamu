@@ -58,22 +58,33 @@
         }
 
         /* ボタンと文字のスタイル復元 */
+       
         h1 {
             font-size: clamp(1.8rem, 5vw, 2.5rem);
-            font-weight: 500;
-            color: #ddd;
+            color: white;
+            margin-top: 5vh;
+            font-weight: 200; /* 細くする */
             position: relative;
-            display: inline-block;
-            padding: 15px;
-            overflow: hidden;
-            text-shadow: 1px 1px 0 rgba(255, 0, 0, 0.3), -1px -1px 0 rgba(0, 0, 255, 0.3);
+            z-index: 1;
         }
 
-        h2, h3 {
+        h2 {
             font-size: clamp(1rem, 3vw, 1.5rem);
-            font-weight: 300;
             color: white;
-            margin-top: 10px;
+            user-select: none;
+            font-weight: 200; /* 細くする */
+            margin-top: 10px; /* ボタンに近づける */
+            position: relative;
+            z-index: 1;
+        }
+
+        h3 {
+            font-size: clamp(0.7rem, 2.4vw, 1.1rem);
+            color: gray;
+            font-weight: 200; /* 細くする */
+            margin-top: -10px; /* タイトルに近づける */
+            position: relative;
+            z-index: 1;
         }
 
 
