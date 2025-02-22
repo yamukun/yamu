@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>回答入力</title><style>body{background-color:#000;color:#fff;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}.container{text-align:center}input{background-color:transparent;color:#fff;border:none;width:100px;text-align:center;font-size:18px;outline:0;margin:5px}button{background-color:#000;color:#fff;border:2px solid #fff;padding:15px 40px;cursor:pointer;margin-top:20px}</style></head><body><div class="container"><h2>謎を解いて出た指示を１単語づつ小文字で記入しなさい</h2><form id="quizForm"><label style="user-select:none">[</label><input type="text" id="answer1"><span style="user-select:none">]</span><br><label style="user-select:none">[</label><input type="text" id="answer2"><label style="user-select:none">]</label><br><label style="user-select:none">[</label><input type="text" id="answer3"><label style="user-select:none">]</label><br><label style="user-select:none">[</label><input type="text" id="answer4"><label style="user-select:none">]</label><br><p style="user-select:none">0:00</p><button type="button" onclick="checkAnswers()">送信</button></form><p id="message"></p></div><script>function checkAnswers() {
+            const correctAnswers = ["increase", "the", "saturation", "in"]; // 正解を設定
+            const userAnswers = [
+                document.getElementById("answer1").value.trim(),
+                document.getElementById("answer2").value.trim(),
+                document.getElementById("answer3").value.trim(),
+                document.getElementById("answer4").value.trim()
+            ];
+
+            if (JSON.stringify(correctAnswers) === JSON.stringify(userAnswers)) {
+                window.location.href = "https://yamukun.github.io/yamuanswer/";
+            } else {
+                document.getElementById("message").textContent = "間違っています。もう一度試してください。";
+            }
+        }</script></body></html>
